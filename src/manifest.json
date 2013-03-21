@@ -1,0 +1,30 @@
+{
+  "name": "SimplePin",
+  "manifest_version": 2,
+  "version": "1",
+  "description": "Pinboard bookmarklet + a little",
+  "update_url": "https://raw.github.com/lyoshenka/simplepin/master/updates.xml",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions" : ["http://*/*", "https://*/*", "tabs"],
+  "icons" : {
+    "16": "bluepin16x16.png",
+    "48": "bluepin48x48.png",
+    "128": "bluepin128x128.png" },
+  "browser_action": { 
+    "default_icon": "bluepin16x16.png",
+    "default_title": "SimplePin"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*","https://*/*"], 
+//      "js": ["jquery.min.js", "tiny_ga.js", "bettergb.js"],
+      "js": ["jquery.min.js", "simplepin.js"],
+//      "css": ["bettergb.css"],
+      "run_at": "document_end"
+    }
+  ]
+}

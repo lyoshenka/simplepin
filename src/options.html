@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>simplePin Options</title>
+  <link href="reset.css" rel="stylesheet" type="text/css"/>
+  <link href="options.css" rel="stylesheet" type="text/css"/>
+  <script src="jquery.min.js"></script>
+  <script src="options.js"></script>
+</head>
+<body>
+  <div id="content">
+    <h1>SimplePin Options</h1>
+    <form>
+      <fieldset>
+        <div class="group">
+          <h2>Auth</h2>
+          <ul>
+            <li><input type="text" id="auth_token" /></li>
+          </ul>
+        </div>
+
+        <div class="submit">
+          <input class="button" type="submit" id="submit" value="Save" />
+          <span id="saved" style="display:none" >Saved!</span>
+        </div>
+        <a href="#" id="reset">Reset to defaults</a>
+      </fieldset>
+    </form>
+  </div>
+</body></html>
